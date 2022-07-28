@@ -23,7 +23,6 @@ const Index: React.FC = () => {
 
   useEffect((): any => {
     // connect to socket server
-    console.log(process.env.BASE_URL,'process.env.BASE_URL')
     const socket = SocketIOClient.connect(process.env.BASE_URL, {
       path: "/api/socketio",
     });
@@ -70,7 +69,7 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div tw="flex flex-col w-full h-screen">
+    <div style={{width:"60%",margin:'0 auto'}} tw="flex flex-col w-full h-screen">
       <div tw="py-4 text-white  bg-blue-500 sticky top-0">
         <h1 tw="text-center text-2xl font-semibold">Realtime Chat App</h1>
       </div>
